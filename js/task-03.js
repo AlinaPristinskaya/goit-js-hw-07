@@ -19,9 +19,10 @@ const imagesGalery = document.querySelector("ul");
 
 const elementsGalety = images.map((image) => {
   const elGalery = document.createElement("img");
-  elGalery.url = image.url;
+  elGalery.src = image.url;
   console.log(image.url);
   elGalery.alt = image.alt;
+  elGalery.style.width = 40;
   return elGalery;
 });
 console.log(elementsGalety);
