@@ -22,7 +22,7 @@ const elementsGalety = images.map((image) => {
   elGalery.src = image.url;
   console.log(image.url);
   elGalery.alt = image.alt;
-  elGalery.style.width = 40;
+  elGalery.width = 900;
   return elGalery;
 });
 console.log(elementsGalety);
