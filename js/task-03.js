@@ -18,13 +18,14 @@ const images = [
 const imagesGalery = document.querySelector("ul");
 
 const elementsGalety = images.map((image) => {
+  const liElem = document.createElement("li");
   const elGalery = document.createElement("img");
   elGalery.src = image.url;
-  console.log(image.url);
   elGalery.alt = image.alt;
   elGalery.width = 900;
-  return elGalery;
+  liElem.append(elGalery);
+  return liElem;
 });
-console.log(elementsGalety);
 
+console.log(elementsGalety);
 imagesGalery.append(...elementsGalety);
