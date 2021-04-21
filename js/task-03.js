@@ -17,7 +17,7 @@ const images = [
 ];
 const imagesGalery = document.querySelector("ul");
 
-const elementsGalety = images.map((image) => {
+/* const elementsGalety = images.map((image) => {
   const liElem = document.createElement("li");
   const elGalery = document.createElement("img");
   elGalery.src = image.url;
@@ -26,6 +26,13 @@ const elementsGalety = images.map((image) => {
   liElem.append(elGalery);
   return liElem;
 });
-
 console.log(elementsGalety);
-imagesGalery.append(...elementsGalety);
+imagesGalery.append(...elementsGalety); */
+const elenentsGalery = (image) => {
+  return `<li>
+    <img src='${image.url}' alt="${image.alt}">
+    </img>
+  </li>`;
+};
+const makeImages = images.map(elenentsGalery).join("");
+imagesGalery.insertAdjacentHTML("afterbegin", makeImages);
