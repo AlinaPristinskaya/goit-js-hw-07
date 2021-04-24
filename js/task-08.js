@@ -1,30 +1,34 @@
-const opions = ["#757575", "#2196F3", "#3F5185"];
+/* const opions = ["#757575", "#2196F3", "#3F5185"];
 const inputEl = document.querySelector("input");
 const buttonEl = document.querySelectorAll("button");
 console.log(buttonEl);
-const boxEl = document.querySelectorAll("div");
+const boxesEl = document.querySelectorAll("div");
+console.log(boxesEl[1]);
 
-inputEl.addEventListener("change", function fnB(event) {
-  event.currentTarget.value;
-  const amount = event.currentTarget.value;
-  console.log(amount);
+inputEl.addEventListener("change", onInputEl);
+function onInputEl(event) {
+  let amout = event.currentTarget.value;
+  console.log(amout);
+  return amout;
+}
 
-  buttonEl[0].addEventListener("click", createBoxes);
-  console.log(amount);
-  function createBoxes(amount) {
-    console.log(amount.value);
-    const array = [];
-    console.log(amount);
+buttonEl[0].addEventListener("click", createBoxes);
 
-    for (let i = 1; i < amount; i += 1) {
-      const divElem = document.createElement("div");
-      const randomEl = Math.floor(Math.random() * opions.length);
-      const opponentMove = opions[randomEl];
-      divElem.style.backgroundColor = opponentMove;
-      divElem.style.width = "30px";
-      divElem.style.height = "30px";
-      array.push(divElem);
-    }
-    boxEl[1].append(...array);
-  }
-});
+function createBoxes() {
+  let amout = inputEl.currerntTarget;
+  console.log(amout, inputEl.currerntTarget);
+}
+/*   for (let i = 1; i < 6; i += 1) {
+    const divElem = document.iner("div");
+   const randomEl = Math.floor(Math.random() * opions.length);
+    const opponentMove = opions[randomEl];
+    divElem.style.backgroundColor = opponentMove;
+    divElem.style.width = "30px";
+    divElem.style.height = "30px";
+    return; */
+ */
+ const x>0;
+ const s<100
+for (i = 1; i <= s; i += 1){
+  
+}
