@@ -20,11 +20,15 @@ function handleSubmit(event){
     }
     
     const formData = {
-        Login: email,
-        Password: password
+        email: email,
+        password: password
     };
 
     console.log(formData);
 
     form.reset();
 }
+
+
+
+  

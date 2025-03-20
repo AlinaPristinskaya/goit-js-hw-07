@@ -30,28 +30,13 @@ const images = [
 ];
 
 
-const gallery = document.querySelector('ul.gallery');
-
-const fragment = document.createDocumentFragment();
-
-images.forEach(image => {
-  const listItem = document.createElement('li');
-
-  const img = document.createElement('img');
-  
-  img.src = image.url;
-  img.alt = image.alt;
-
-  listItem.appendChild(img);
-
-  fragment.appendChild(listItem);
-});
-
-gallery.appendChild(fragment);
 
 
-// images.map(image => {
-//   return `<li><img src=${image.url} alt=${image.alt}></li>`
-// });
-// const gallery = document.querySelector('ul.gallery');
-// gallery.document.insertAdjacentHTML('afterbegin', gallery);
+
+const gallery = document.querySelector(".gallery");
+
+const galleryMarkup = images
+  .map(({ url, alt }) => `<li class="gallery-item"><img src="${url}" alt="${alt}" width="300"></li>`)
+  .join("");
+
+gallery.insertAdjacentHTML("beforeend", galleryMarkup);
